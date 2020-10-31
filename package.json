@@ -1,0 +1,27 @@
+{
+  "name": "oldst.labs-exam-frontend",
+  "version": "1.0.0",
+  "description": "Appointment System built in Node.js (client)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migsladisla/oldstlabs-exam-frontend.git"
+  },
+  "author": "Juan Miguel Ladisla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migsladisla/oldstlabs-exam-frontend/issues"
+  },
+  "homepage": "https://github.com/migsladisla/oldstlabs-exam-frontend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
