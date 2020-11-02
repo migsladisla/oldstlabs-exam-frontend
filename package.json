@@ -4,6 +4,7 @@
   "description": "Appointment System built in Node.js (client)",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +22,12 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "validator": "^13.1.17"
   }
 }
