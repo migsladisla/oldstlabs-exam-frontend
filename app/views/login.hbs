@@ -1,0 +1,52 @@
+<div id="login-card" class="w-full max-w-sm mx-auto">
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h1 class="font-bold text-2xl text-blue-900">Sign in to your account</h1>
+        <div role="alert" id="login-error-alert" class="w-full md:mb-0 mt-6 hidden">
+            <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+                Uh oh.. There was an error.
+            </div>
+            <div 
+                id="login-errors"
+                class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700 text-sm">
+                <p></p>
+            </div>
+        </div>
+        <div class="mb-4 mt-6">
+            <label class="block text-blue-900 text-sm font-bold mb-2" for="email">
+                Email
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-900 leading-tight focus:outline-none focus:shadow-outline"
+                id="email" name="email" type="text" placeholder="Email address">
+        </div>
+        <div class="mb-6">
+            <label class="block text-blue-900 text-sm font-bold mb-2" for="password">
+                Password
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-900 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                id="password" name="password" type="password" placeholder="***********">
+        </div>
+        <div class="flex items-center justify-between">
+            <button
+                id="sign-in-btn"
+                class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button">
+                Sign In
+            </button>
+            <span class="inline-block align-baseline text-sm text-blue-900 hover:text-blue-800">
+                No account? <a class="underline text-blue-600 hover:text-blue-900" href="/register">Create one</a>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="mt-12">
+    <img 
+        id="login-page-image" 
+        class="mx-auto"
+        src="/images/login-svg-image.svg" 
+        alt="Two-Doctors-Standing">
+</div>
+
+<script src="/javascripts/views/login.js"></script>
+<script src="/javascripts/validations/login.validate.js"></script>

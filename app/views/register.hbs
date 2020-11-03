@@ -1,0 +1,86 @@
+<div class="w-full shadow-md max-w-lg mx-auto">
+    <form id="register-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="/register" method="POST">
+        <h1 class="font-bold text-2xl text-blue-900 mb-6">Create your account</h1>
+        <div role="alert" id="register-error-alert" class="w-full md:mb-0 mt-6 hidden">
+            <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+                Uh oh.. There was an error.
+            </div>
+            <div 
+                id="register-errors"
+                class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700 text-sm">
+                <p></p>
+            </div>
+        </div>
+        {{#if errors}}
+            <div role="alert" class="w-full md:mb-0 mt-6">
+                <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+                    Uh oh..
+                </div>
+                <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700 text-sm">
+                    {{#each errors}}
+                        <p>- {{this.msg}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
+        <div class="flex flex-wrap -mx-3 mb-2 mt-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block tracking-wide text-blue-900 text-xs font-bold mb-2" for="grid-first-name">
+                    First Name
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-blue-900 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="grid-first-name" name="first_name" type="text" placeholder="Jane">
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+                <label class="block tracking-wide text-blue-900 text-xs font-bold mb-2" for="grid-last-name">
+                    Last Name
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-blue-900 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-last-name" name="last_name" type="text" placeholder="Doe">
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-2">
+            <div class="w-full px-3">
+                <label class="block tracking-wide text-blue-900 text-xs font-bold mb-2" for="grid-email">
+                    Email
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-blue-900 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-email" name="email" type="email" placeholder="user@oldst.com">
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-4">
+            <div class="w-full px-3">
+                <label class="block tracking-wide text-blue-900 text-xs font-bold mb-2" for="grid-password">
+                    Password
+                </label>
+                <input
+                    class="appearance-none block w-full bg-gray-200 text-blue-900 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password" name="password" type="password" placeholder="******************">
+            </div>
+        </div>
+        <div class="flex items-center justify-between">
+            <button
+                id="sign-up-btn"
+                class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button">
+                Create account
+            </button>
+            <span class="inline-block align-baseline text-sm text-blue-900 hover:text-blue-800">
+                Already have an account? <a class="underline text-blue-600 hover:text-blue-900" href="/login">Sign In</a>
+            </span>
+        </div>
+    </form>
+</div>
+<div class="mt-12">
+    <img 
+        id="register-page-image" 
+        class="mx-auto"
+        src="/images/register-svg-image.svg" 
+        alt="Two-Doctors-Standing">
+</div>
+
+<script src="/javascripts/views/register.js"></script>
+<script src="/javascripts/validations/register.validate.js"></script>

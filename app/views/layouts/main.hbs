@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html class="h-full">
+    <head>
+        <title>{{ title }}</title>
+        {{> core_styles }}
+    </head>
+    <body class="flex flex-col h-full">
+        <style>
+            [x-cloak] {
+                display: none;
+            }
+        </style>
+        {{> header }}
+        <main class="container flex-1 mx-auto p-12">
+            {{{ body }}}
+        </main>
+        {{> footer }}
+        {{> core_scripts }}
+    </body>
+</html>
