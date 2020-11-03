@@ -1,0 +1,12 @@
+#login-page-image,
+#register-page-image,
+#index-page-image {
+    height: 35em;
+    width: auto;
+}
+
+#create-page-image,
+#edit-page-image {
+    height: 30em;
+    width: auto;
+}
